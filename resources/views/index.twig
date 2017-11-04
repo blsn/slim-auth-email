@@ -1,0 +1,7 @@
+{% extends 'templates/app.twig' %}
+{% block title %}Homepage{% endblock %}
+{% block content %}
+    <h1>Homepage</h1>
+    <h2>{{name}}</h2><!-- name in url path (see HomeController) -->
+    <h6>{{u.name}}</h6><!-- name in DB of user (see HomeController) -->
+{% endblock %}
