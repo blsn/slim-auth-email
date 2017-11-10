@@ -671,7 +671,7 @@ class AuthController extends Controller
             $this->flash->addMessage('info','Please confirm your email. We send a Email with activate Code.');
             return $response->withRedirect($this->router->pathFor('home'));
         } catch (\Nette\Mail\SmtpException $e) {
-            $this->flash->addMessage('error', 'Email could not be sent: ' . $e->getMessage());
+            $this->flash->addMessage('danger', 'Email could not be sent: ' . $e->getMessage());
             return $response->withRedirect($this->router->pathFor('auth.signup'));
         }
     }
